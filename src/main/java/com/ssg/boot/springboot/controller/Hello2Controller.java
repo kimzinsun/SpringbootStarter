@@ -1,6 +1,6 @@
 package com.ssg.boot.springboot.controller;
 
-import com.ssg.boot.springboot.MediaTypeUtils;
+import com.ssg.boot.springboot.util.MediaTypeUtils;
 import com.ssg.boot.springboot.dto.PdsDto;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,8 +22,8 @@ import java.util.Date;
 public class Hello2Controller {
     @PostMapping("fileupload")
     public String fileupload(PdsDto pds, @RequestParam("uploadfile") MultipartFile uploadfile, HttpServletRequest request) throws IOException {
-        System.out.println("Hello2Controller fileupload()" + new Date());
-        System.out.println(pds.toString());
+        
+        
 
         // 파일 업로드 경로
         String path = request.getServletContext().getRealPath("/upload");
@@ -50,7 +50,7 @@ public class Hello2Controller {
 
     @GetMapping("filedownload")
     public ResponseEntity<InputStreamResource> filedownload(String filename, HttpServletRequest request) throws FileNotFoundException {
-        System.out.println("Hello2Controller filedownload()" + new Date());
+        
 
         // 파일 업로드 경로
         String path = request.getServletContext().getRealPath("/upload");

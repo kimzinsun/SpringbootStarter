@@ -1,4 +1,4 @@
-package com.ssg.boot.springboot;
+package com.ssg.boot.springboot.util;
 
 import jakarta.servlet.ServletContext;
 import org.springframework.http.MediaType;
